@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fa;
+  color: #1a1a1a;
+}
+
+.container {
+  width: min(920px, 94%);
+  margin: 24px auto;
+  display: grid;
+  gap: 16px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+}
+
+.header p {
+  margin: 0;
+  color: #5b6574;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.status {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.connected {
+  background: #daf7e3;
+  color: #0e7a37;
+}
+
+.disconnected {
+  background: #fee2e2;
+  color: #9f1f1f;
+}
+
+.muted {
+  margin: 8px 0 0;
+  color: #5b6574;
+}
+
+.grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: #f9fbff;
+  border: 1px solid #e4ebf4;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.card-title {
+  font-size: 0.88rem;
+  color: #5b6574;
+  margin: 0 0 6px;
+}
+
+.card-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.toggle {
+  position: relative;
+  width: 56px;
+  height: 30px;
+  display: inline-block;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #c3cbd6;
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 3px;
+  top: 3px;
+  border-radius: 50%;
+  background: white;
+  transition: 0.2s;
+}
+
+input:checked + .slider {
+  background: #2563eb;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+.error {
+  background: #fff4f4;
+  border: 1px solid #ffc9c9;
+  color: #a11b1b;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 12px auto 22px;
+  }
+
+  .panel {
+    padding: 14px;
+  }
+
+  .card-value {
+    font-size: 1.15rem;
+  }
+}

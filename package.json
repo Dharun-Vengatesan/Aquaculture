@@ -1,0 +1,28 @@
+{
+  "name": "aquaculture",
+  "version": "1.0.0",
+  "description": "Beginner-friendly generic IoT dashboard with Express and vanilla JS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dharun-Vengatesan/Aquaculture.git"
+  },
+  "keywords": [
+    "iot",
+    "dashboard",
+    "express",
+    "esp32",
+    "esp8266",
+    "arduino"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dharun-Vengatesan/Aquaculture/issues"
+  },
+  "homepage": "https://github.com/Dharun-Vengatesan/Aquaculture#readme"
+}
