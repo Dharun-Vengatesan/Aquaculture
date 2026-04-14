@@ -1,0 +1,33 @@
+void setup() {
+  Serial.begin(9600);
+  delay(1000);
+
+  Serial.println("===== ARDUINO UNO DEBUG START =====");
+}
+
+void loop() {
+
+  // Fake sensor values for demo
+  float pH = 7.2;
+  float turbidity = 450;
+  float temperature = 28.5;
+
+  // Print for debugging
+  Serial.print("pH: ");
+  Serial.print(pH);
+
+  Serial.print(" | Turbidity: ");
+  Serial.print(turbidity);
+
+  Serial.print(" | Temp: ");
+  Serial.println(temperature);
+
+  // Send to ESP8266 in CSV format
+  Serial.print(pH);
+  Serial.print(",");
+  Serial.print(turbidity);
+  Serial.print(",");
+  Serial.println(temperature);
+
+  delay(2000);
+}
